@@ -12,8 +12,8 @@ html {
 body {
     height: 100vh;
     width: 100%;
-    background: #f2f2f2; /* Fondo gris claro */
-    color: #1a1a1a; /* Texto en negro oscuro */
+    background: #f2f2f2;
+    color: #1a1a1a;
     font-family: 'Birthstone', cursive;
     font-size: 1.50rem;
     letter-spacing: 1px;
@@ -21,7 +21,7 @@ body {
 
 img {
     width: 100%;
-    filter: grayscale(100%); /* Filtro para convertir imágenes a blanco y negro */
+    filter: grayscale(100%);
 }
 
 .container {
@@ -32,11 +32,12 @@ img {
     font-size: 3rem;
     padding: 2% 0;
 }
+
 .titulo {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -58,9 +59,9 @@ align-items: center;
 
 .navbar li a {
     position: relative;
-    color: #1a1a1a; /* Texto negro oscuro */
+    color: #1a1a1a;
     text-decoration: none;
-    border-bottom: 2px solid #555555; /* Borde inferior gris oscuro */
+    border-bottom: 2px solid #555555;
     padding-bottom: 2px;
     z-index: 0;
     cursor: pointer;
@@ -69,7 +70,7 @@ align-items: center;
 }
 
 .navbar li a:hover {
-    border-bottom: 2px solid #1a1a1a; /* El borde inferior cambia a negro oscuro en hover */
+    border-bottom: 2px solid #1a1a1a;
     animation: bounce 0.5s ease;
 }
 
@@ -78,13 +79,13 @@ align-items: center;
     justify-content: space-evenly;
     margin: auto;
     padding: 2.5% 0;
+    font-size: 1.75rem;
     opacity: 0;
     animation: fadeInUp 1.5s ease-in-out forwards;
-    font-size: 1.75rem;
 }
 
 .wedding {
-    background: #d9d9d9; /* Fondo gris medio para la sección de la boda */
+    background: #d9d9d9;
 }
 
 .story .img-container, .wedding .img-container {
@@ -117,9 +118,9 @@ align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #f2f2f2; /* Texto gris claro */
+    color: #f2f2f2;
     animation: bgRollingAnim 5.5s ease infinite;
-    filter: grayscale(100%); /* Convertir el fondo a blanco y negro */
+    filter: grayscale(100%);
 }
 
 .reminder {
@@ -129,8 +130,8 @@ align-items: center;
 
 .reminder div {
     width: max-content;
-    background: rgba(90, 90, 90, 0.1); /* Fondo gris sutil */
-    border: 1px solid rgba(90, 90, 90, 0.3); /* Borde gris sutil */
+    background: rgba(90, 90, 90, 0.1);
+    border: 1px solid rgba(90, 90, 90, 0.3);
     border-radius: 16px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -265,5 +266,54 @@ align-items: center;
 
     .reminder div span {
         font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 660px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .navbar li a {
+        font-size: 1.25rem;
+    }
+
+    .story .img-container, .wedding .img-container,
+    .story .text-container, .wedding .text-container {
+        width: 95%;
+    }
+
+    .reminder div {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .reminder div span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .navbar li a {
+        font-size: 1.25rem;
+    }
+
+    .story .img-container, .wedding .img-container,
+    .story .text-container, .wedding .text-container {
+        width: 100%;
+    }
+
+    .reminder div {
+        width: 80%;
+        padding: 5px;
+        font-size: 1.50rem;
+    }
+
+    .reminder div span {
+        font-size: 1.75rem;
     }
 }
