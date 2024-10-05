@@ -9,6 +9,28 @@ html {
     scroll-behavior: smooth;
 }
 
+.cabeza {
+    margin-left: -30%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.retrato {
+    display: flex;
+    justify-content: space-between; /* Mantiene separación entre imágenes */
+    align-items: center;
+    width: 50%; /* Hace que ocupe todo el ancho disponible */
+    max-width: 1000px; /* Limita el ancho máximo de la fila de imágenes */
+    gap: 20px; /* Ajusta el espacio entre las imágenes */
+}
+
+.primeras {
+    max-width: 50%; /* Asegura que las imágenes no se desborden */
+    height: auto; /* Mantiene la proporción original de las imágenes */
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -114,12 +136,12 @@ img {
 
 .reminder-container {
     flex-direction: column;
-    background-image: linear-gradient(#1a1a1a80, transparent), url(https://images.unsplash.com/photo-1512180958517-a7e591660832?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
+    background-image: linear-gradient(#1a1a1a80, transparent), url(/imagenes/reloj.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #f2f2f2;
-    animation: bgRollingAnim 5.5s ease infinite;
+    animation: bgRollingAnim 10.5s ease infinite;
     filter: grayscale(100%);
 }
 
