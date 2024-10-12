@@ -9,27 +9,96 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Estilos existentes para .cabeza */
 .cabeza {
     margin-left: -30%;
-    background-color: #f0f0f0;
+    background-color: #d9d9d9; /* Cambiado a blanco */
     padding: 20px;
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
+    position: relative; /* Necesario para posicionar los pseudo-elementos */
+    border-radius: 15px; /* Bordes redondeados para suavizar el marco */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    border: 5px solid #000000; /* Borde sólido negro */
+    overflow: hidden; /* Para asegurar que los decorativos no sobresalgan */
 }
 
+/* Pseudo-elemento superior izquierdo */
+.cabeza::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    border-top: 3px solid #000000; /* Cambiado a negro */
+    border-left: 3px solid #000000; /* Cambiado a negro */
+    border-radius: 0;
+    /* Opcional: Añadir patrones o detalles decorativos */
+    background: url('imagenes/decoracion-floral-negro.png') no-repeat center; /* Asegúrate de que la imagen sea en blanco y negro */
+    background-size: contain;
+}
+
+/* Pseudo-elemento inferior derecho */
+.cabeza::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #000000; /* Cambiado a negro */
+    border-right: 3px solid #000000; /* Cambiado a negro */
+    border-radius: 0;
+    /* Opcional: Añadir patrones o detalles decorativos */
+    background: url('imagenes/decoracion-floral-negro.png') no-repeat center; /* Asegúrate de que la imagen sea en blanco y negro */
+    background-size: contain;
+}
+
+/* Ajustes adicionales para mejorar la estética */
 .retrato {
     display: flex;
-    justify-content: space-between; /* Mantiene separación entre imágenes */
+    justify-content: space-between; 
     align-items: center;
-    width: 50%; /* Hace que ocupe todo el ancho disponible */
-    max-width: 1000px; /* Limita el ancho máximo de la fila de imágenes */
-    gap: 20px; /* Ajusta el espacio entre las imágenes */
+    width: 50%; 
+    max-width: 1000px; 
+    gap: 20px; 
 }
 
 .primeras {
-    max-width: 50%; /* Asegura que las imágenes no se desborden */
-    height: auto; /* Mantiene la proporción original de las imágenes */
+    max-width: 50%; 
+    height: auto; 
+    border: 2px solid #000000; /* Cambiado a negro */
+    border-radius: 10px; /* Bordes redondeados en las imágenes */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil en las imágenes */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    background-color: #ffffff; /* Asegura que el fondo de las imágenes sea blanco */
 }
+
+.primeras:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cabeza {
+        margin-left: 0; /* Centrar en pantallas pequeñas */
+        padding: 15px;
+        width: 90%;
+    }
+
+    .retrato {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .primeras {
+        max-width: 80%;
+    }
+}
+
 
 body {
     height: 100vh;
